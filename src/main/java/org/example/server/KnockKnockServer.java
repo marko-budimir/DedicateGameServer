@@ -1,43 +1,25 @@
 package org.example.server;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.net.ServerSocket;
-import java.net.Socket;
 
 public class KnockKnockServer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
 
         if (args.length != 1) {
             System.err.println("Usage: KnockKnockServer <port number>");
         }
 
         int portNumber = Integer.parseInt(args[0]);
+        boolean listening = true;
 
-        try (
-                ServerSocket serverSocket = new ServerSocket(portNumber);
-                Socket clientSocket = serverSocket.accept();
-                PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-                BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-        ) {
-            String inputLine, outputLine;
-
-            KnockKnockProtocol kkp = new KnockKnockProtocol();
-            outputLine = kkp.processInput(null);
-            out.println(outputLine);
-
-            while ((inputLine = in.readLine()) != null) {
-                outputLine = kkp.processInput(inputLine);
-                out.println(outputLine);
-                if (outputLine.equals("Bye."))
-                    break;
+        try (ServerSocket serverSocket = new ServerSocket(portNumber)) {
+            while (listening) {
+                new KKMultiServerThread(serverSocket.accept()).start();
             }
         } catch (IOException e) {
-            System.out.println("Exception caught when trying to listen on port " + portNumber +
-                    " or listening for a connection");
-            System.out.println(e.getMessage());
+            System.out.println("Could not listen on port " + portNumber);
+            System.exit(-1);
         }
     }
 }
