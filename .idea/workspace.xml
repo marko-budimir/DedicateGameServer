@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add KnockKnockServer">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/server/KKMultiServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add Multi Threading">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/server/SocketManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/KnockKnockServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/KnockKnockServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/KnockKnockClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/KKMultiServerThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/KnockKnockProtocol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/KnockKnockServer.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,40 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.KnockKnockClient">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.ChatClient">
+    <configuration name="ChatClient" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.client.ChatClient" />
+      <module name="DedicateGameServer.main" />
+      <option name="PROGRAM_PARAMETERS" value="localhost 4444" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChatServer" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.server.ChatServer" />
+      <module name="DedicateGameServer.main" />
+      <option name="PROGRAM_PARAMETERS" value="4444" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KnockKnockClient" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.client.KnockKnockClient" />
       <module name="DedicateGameServer.main" />
@@ -106,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1686777095539</updated>
       <workItem from="1686777096544" duration="3460000" />
-      <workItem from="1686819652089" duration="3433000" />
+      <workItem from="1686819652089" duration="16976000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -129,16 +167,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686779735227</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add Multi Threading">
+      <created>1686830520866</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686830520866</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Add KnockKnockClient" />
     <MESSAGE value="Add KnockKnockServer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add KnockKnockServer" />
+    <MESSAGE value="Add Multi Threading" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Multi Threading" />
   </component>
 </project>
