@@ -21,9 +21,11 @@ public class ChatClient {
             stdIn = new BufferedReader(new InputStreamReader(System.in));
         } catch (UnknownHostException e) {
             System.err.println("Don't know about host " + hostName);
+            closeClient();
             throw new RuntimeException(e);
         } catch (IOException e) {
             System.err.println("Couldn't get I/O for the connection to " + hostName);
+            closeClient();
             throw new RuntimeException(e);
         }
     }
@@ -54,6 +56,8 @@ public class ChatClient {
                 System.err.println("Couldn't get I/O from server");
                 closeClient();
                 System.exit(1);
+            } finally {
+                closeClient();
             }
         });
         serverThread.start();
@@ -68,6 +72,8 @@ public class ChatClient {
                 System.err.println("Couldn't get I/O for the connection to server");
                 closeClient();
                 System.exit(1);
+            } finally {
+                closeClient();
             }
         });
         clientThread.start();
@@ -75,14 +81,17 @@ public class ChatClient {
 
 
     private void closeClient() {
-        try {
-            stdIn.close();
-            serverWriter.close();
-            serverReader.close();
-            socket.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (socket != null && serverReader != null && serverWriter != null && stdIn != null) {
+            try {
+                stdIn.close();
+                serverWriter.close();
+                serverReader.close();
+                socket.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
     }
 
 }
