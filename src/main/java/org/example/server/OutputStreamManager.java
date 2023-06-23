@@ -5,17 +5,17 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SocketManager {
-    public static SocketManager instance;
+public class OutputStreamManager {
+    public static OutputStreamManager instance;
     private final List<OutputStream> outputStreams;
 
-    private SocketManager() {
+    private OutputStreamManager() {
         outputStreams = new ArrayList<>();
     }
 
-    public static synchronized SocketManager getInstance() {
+    public static synchronized OutputStreamManager getInstance() {
         if (instance == null) {
-            instance = new SocketManager();
+            instance = new OutputStreamManager();
         }
         return instance;
     }
@@ -39,7 +39,6 @@ public class SocketManager {
                 PrintWriter out = new PrintWriter(outputStream, true);
                 out.println("User " + (userIndex + 1) + ": " + message);
             }
-
         }
     }
 }

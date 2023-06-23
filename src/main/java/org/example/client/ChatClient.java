@@ -8,10 +8,10 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 public class ChatClient {
-    private Socket socket;
-    private BufferedReader serverReader;
-    private PrintWriter serverWriter;
-    private BufferedReader stdIn;
+    private final Socket socket;
+    private final BufferedReader serverReader;
+    private final PrintWriter serverWriter;
+    private final BufferedReader stdIn;
 
     public ChatClient(String hostName, int portNumber) {
         try {

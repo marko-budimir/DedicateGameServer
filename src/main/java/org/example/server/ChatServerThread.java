@@ -7,27 +7,27 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 public class ChatServerThread extends Thread {
-    private Socket socket = null;
-    private SocketManager socketManager = null;
+    private final Socket socket;
+    private final OutputStreamManager outputStreamManager;
 
     public ChatServerThread(Socket socket) {
         super("ChatServerThread");
         this.socket = socket;
-        socketManager = SocketManager.getInstance();
+        outputStreamManager = OutputStreamManager.getInstance();
     }
 
     public void run() {
 
         try (
-                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+                BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()))
         ) {
             OutputStream outputStream = socket.getOutputStream();
-            socketManager.addOutputStream(outputStream);
+            outputStreamManager.addOutputStream(outputStream);
             String inputLine;
             while ((inputLine = in.readLine()) != null) {
-                socketManager.broadcast(outputStream, inputLine);
+                outputStreamManager.broadcast(outputStream, inputLine);
             }
-            socketManager.removeOutputStream(outputStream);
+            outputStreamManager.removeOutputStream(outputStream);
             socket.close();
         } catch (IOException e) {
             throw new RuntimeException(e);

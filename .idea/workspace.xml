@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add chat and remove KnockKnock">
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Edit closeClient() and add it to catch and finally blocks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/SocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -71,10 +75,10 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.ChatClient">
-    <configuration name="ChatClient" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="ChatClient" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.client.ChatClient" />
       <module name="DedicateGameServer.main" />
-      <option name="PROGRAM_PARAMETERS" value="localhost 4444" />
+      <option name="PROGRAM_PARAMETERS" value="192.168.124.152 4444" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.client.*" />
@@ -138,7 +142,9 @@
       <updated>1686777095539</updated>
       <workItem from="1686777096544" duration="3460000" />
       <workItem from="1686819652089" duration="21312000" />
-      <workItem from="1687255684991" duration="319000" />
+      <workItem from="1687255684991" duration="2597000" />
+      <workItem from="1687443937232" duration="1903000" />
+      <workItem from="1687522650931" duration="1578000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -175,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687176213571</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Edit closeClient() and add it to catch and finally blocks">
+      <created>1687256331927</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687256331927</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +211,7 @@
     <MESSAGE value="Add KnockKnockServer" />
     <MESSAGE value="Add Multi Threading" />
     <MESSAGE value="Add chat and remove KnockKnock" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chat and remove KnockKnock" />
+    <MESSAGE value="Edit closeClient() and add it to catch and finally blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit closeClient() and add it to catch and finally blocks" />
   </component>
 </project>
