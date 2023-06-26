@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.*;
 
 public class ChatClient {
+    private static final int PORT_NUMBER = 4445;
     private final DatagramSocket socket;
     private final BufferedReader stdIn;
 
@@ -13,7 +14,7 @@ public class ChatClient {
         try {
             socket = new DatagramSocket(null);
             socket.setReuseAddress(true);
-            socket.bind(new InetSocketAddress(4445));
+            socket.bind(new InetSocketAddress(PORT_NUMBER));
             stdIn = new BufferedReader(new InputStreamReader(System.in));
         } catch (IOException e) {
             System.err.println("Couldn't get I/O for the connection to server");

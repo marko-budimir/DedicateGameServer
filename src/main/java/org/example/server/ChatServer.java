@@ -28,11 +28,12 @@ public class ChatServer {
                     users.add(address);
                     userId = users.indexOf(address);
                 }
-                buf = ("User " + (userId + 1) + ": " + new String(packet.getData(), 0, packet.getLength())).getBytes();
+                buf = ("User " + (userId + 1) + ": " + new String(packet.getData(), 0, packet.getLength()))
+                        .getBytes();
 
                 packet = new DatagramPacket(buf, buf.length, address, port);
                 String received = new String(packet.getData(), 0, packet.getLength());
-                broadCast(received, serverSocket);
+                broadcast(received, serverSocket);
             }
         } catch (SocketException e) {
             System.err.println("Could not open socket");
@@ -43,7 +44,7 @@ public class ChatServer {
         }
     }
 
-    private static void broadCast(String message, DatagramSocket socket) {
+    private static void broadcast(String message, DatagramSocket socket) {
         try {
             InetAddress address = InetAddress.getByName("255.255.255.255");
             DatagramPacket packet = new DatagramPacket(message.getBytes(), message.getBytes().length, address, PORT_NUMBER);
