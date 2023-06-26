@@ -12,16 +12,16 @@ public class BroadcastServer extends Thread {
     private final DatagramSocket socket;
     private boolean running = true;
 
-    public BroadcastServer() throws SocketException {
+    public BroadcastServer(DatagramSocket socket) throws SocketException {
         super("BroadcastServer");
-        socket = new DatagramSocket(PORT_NUMBER);
+        this.socket = socket;
     }
 
     public void run() {
         while (running) {
             try {
-                byte[] buf = new byte[256];
-                InetAddress address = InetAddress.getByName("localhost");
+                byte[] buf = new byte[0];
+                InetAddress address = InetAddress.getByName("255.255.255.255");
                 DatagramPacket packet = new DatagramPacket(buf, buf.length, address, PORT_NUMBER);
                 socket.send(packet);
 

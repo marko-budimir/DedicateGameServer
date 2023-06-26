@@ -3,54 +3,54 @@ package org.example.client;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
-import java.net.UnknownHostException;
+import java.net.*;
 
 public class ChatClient {
-    private final Socket socket;
-    private final BufferedReader serverReader;
-    private final PrintWriter serverWriter;
+    private final DatagramSocket socket;
     private final BufferedReader stdIn;
 
-    public ChatClient(String hostName, int portNumber) {
+    public ChatClient() {
         try {
-            socket = new Socket(hostName, portNumber);
-            serverReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            serverWriter = new PrintWriter(socket.getOutputStream(), true);
+            socket = new DatagramSocket(null);
+            socket.setReuseAddress(true);
+            socket.bind(new InetSocketAddress(4445));
             stdIn = new BufferedReader(new InputStreamReader(System.in));
-        } catch (UnknownHostException e) {
-            System.err.println("Don't know about host " + hostName);
-            closeClient();
-            throw new RuntimeException(e);
         } catch (IOException e) {
-            System.err.println("Couldn't get I/O for the connection to " + hostName);
+            System.err.println("Couldn't get I/O for the connection to server");
             closeClient();
             throw new RuntimeException(e);
         }
     }
 
-
     public static void main(String[] args) {
 
-        if (args.length != 2) {
-            System.err.println("Usage: ChatClient <host name> <port number>");
-            System.exit(1);
-        }
-
-        String hostName = args[0];
-        int portNumber = Integer.parseInt(args[1]);
-
-        ChatClient client = new ChatClient(hostName, portNumber);
+        ChatClient client = new ChatClient();
         client.start();
     }
 
     public void start() {
+        byte[] buf = new byte[256];
+        DatagramPacket initialPacket = new DatagramPacket(buf, buf.length);
+        try {
+            socket.receive(initialPacket);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        InetAddress address = initialPacket.getAddress();
+        int port = initialPacket.getPort();
+        System.out.println("Connected to server at " + address + ":" + port);
+
+
         Thread serverThread = new Thread(() -> {
+            boolean running = true;
             try {
-                String message;
-                while ((message = serverReader.readLine()) != null) {
-                    System.out.println(message);
+                while (running) {
+                    DatagramPacket packet = new DatagramPacket(buf, buf.length);
+                    socket.receive(packet);
+                    String received = new String(packet.getData(), 0, packet.getLength());
+                    if (!received.isEmpty()) {
+                        System.out.println(received);
+                    }
                 }
             } catch (IOException e) {
                 System.err.println("Couldn't get I/O from server");
@@ -66,8 +66,17 @@ public class ChatClient {
             try {
                 String input;
                 while ((input = stdIn.readLine()) != null) {
-                    serverWriter.println(input);
+                    DatagramPacket packet = new DatagramPacket(
+                            input.getBytes(),
+                            input.getBytes().length,
+                            address,
+                            port);
+                    socket.send(packet);
                 }
+            } catch (UnknownHostException e) {
+                System.err.println("Don't know about host");
+                closeClient();
+                System.exit(1);
             } catch (IOException e) {
                 System.err.println("Couldn't get I/O for the connection to server");
                 closeClient();
@@ -79,19 +88,14 @@ public class ChatClient {
         clientThread.start();
     }
 
-
     private void closeClient() {
-        if (socket != null && serverReader != null && serverWriter != null && stdIn != null) {
+        if (socket != null && stdIn != null) {
             try {
                 stdIn.close();
-                serverWriter.close();
-                serverReader.close();
                 socket.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-
     }
-
 }
