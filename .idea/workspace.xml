@@ -7,11 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add BroadcastServer and edit ChatServer to use UDP broadcast">
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Edit ChatClient to use UDP and fix ChatServer and BroadcastServer">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HelloWorld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/BroadcastServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/BroadcastServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,7 @@
       <recent name="org.example.server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChatClient">
+  <component name="RunManager" selected="Application.HelloWorld">
     <configuration name="BroServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.BroServer" />
       <module name="DedicateGameServer.main" />
@@ -138,6 +137,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.HelloWorld" />
+      <module name="DedicateGameServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="KnockKnockClient" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.client.KnockKnockClient" />
       <module name="DedicateGameServer.main" />
@@ -168,6 +180,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloWorld" />
         <item itemvalue="Application.BroadcastingClient" />
         <item itemvalue="Application.BroServer" />
       </list>
@@ -187,7 +200,7 @@
       <workItem from="1687443937232" duration="1903000" />
       <workItem from="1687522650931" duration="2552000" />
       <workItem from="1687527238690" duration="13372000" />
-      <workItem from="1687615163228" duration="11531000" />
+      <workItem from="1687615163228" duration="13545000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -252,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687549449978</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Edit ChatClient to use UDP and fix ChatServer and BroadcastServer">
+      <created>1687776198783</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687776198783</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +298,8 @@
     <MESSAGE value="Edit closeClient() and add it to catch and finally blocks" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Add BroadcastServer and edit ChatServer to use UDP broadcast" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add BroadcastServer and edit ChatServer to use UDP broadcast" />
+    <MESSAGE value="Edit ChatClient to use UDP and fix ChatServer and BroadcastServer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit ChatClient to use UDP and fix ChatServer and BroadcastServer" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
