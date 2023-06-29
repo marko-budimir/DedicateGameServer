@@ -88,13 +88,22 @@ public class ChatClient {
     }
 
     private void closeClient() {
-        if (socket != null && stdIn != null) {
-            try {
-                stdIn.close();
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+        try {
+            if (serverReader != null) {
+                serverReader.close();
             }
+            if (serverWriter != null) {
+                serverWriter.close();
+            }
+            if (stdIn != null) {
+                stdIn.close();
+            }
+            if (socket != null) {
+                socket.close();
+            }
+        } catch (IOException e) {
+            System.err.println("Couldn't close client");
+            System.exit(1);
         }
     }
 }

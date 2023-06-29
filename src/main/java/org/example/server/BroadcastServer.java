@@ -44,5 +44,6 @@ public class BroadcastServer extends Thread {
                 e.printStackTrace();
             }
         }
+        socket.close();
     }
 }

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OutputStreamManager {
-    public static OutputStreamManager instance;
+    private static final OutputStreamManager instance = new OutputStreamManager();
     private final List<OutputStream> outputStreams;
 
     private OutputStreamManager() {
@@ -14,9 +14,6 @@ public class OutputStreamManager {
     }
 
     public static synchronized OutputStreamManager getInstance() {
-        if (instance == null) {
-            instance = new OutputStreamManager();
-        }
         return instance;
     }
 
