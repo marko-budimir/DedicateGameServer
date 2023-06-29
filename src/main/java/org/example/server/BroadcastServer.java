@@ -4,23 +4,32 @@ import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketException;
 
 public class BroadcastServer extends Thread {
-    private static final long SLEEP_TIME = 10000;
+    private static final long SLEEP_TIME = 5000;
     private static final int PORT_NUMBER = 4445;
-    private final DatagramSocket socket;
+    private DatagramSocket socket;
     private boolean running = true;
+    private final int portNumber;
 
-    public BroadcastServer(DatagramSocket socket) {
+    public BroadcastServer(final int portNumber) {
         super("BroadcastServer");
-        this.socket = socket;
+        this.portNumber = portNumber;
+        try {
+            this.socket = new DatagramSocket();
+            socket.setBroadcast(true);
+        } catch (SocketException e) {
+            System.err.println("Couldn't open socket");
+            System.exit(-1);
+        }
     }
 
     @Override
     public void run() {
         while (running) {
             try {
-                byte[] buf = new byte[0];
+                byte[] buf = String.valueOf(portNumber).getBytes();
                 InetAddress address = InetAddress.getByName("255.255.255.255");
                 DatagramPacket packet = new DatagramPacket(buf, buf.length, address, PORT_NUMBER);
                 socket.send(packet);
