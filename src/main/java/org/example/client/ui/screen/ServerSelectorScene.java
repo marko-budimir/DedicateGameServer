@@ -1,19 +1,19 @@
 package org.example.client.ui.screen;
 
 
-import org.example.client.ui.listener.KeyListener;
-import org.example.client.ui.listener.MouseListener;
-import org.example.client.ui.model.Rectangle;
 import org.example.client.structure.Vector2;
 import org.example.client.structure.Vector3;
+import org.example.client.ui.listener.MouseListener;
+import org.example.client.ui.model.Rectangle;
 
-import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServerSelectorScene extends Scene {
 
     private boolean changingScene = false;
     private float timeToChangeScene = 2.0f;
-    private Rectangle button;
+    private List<Rectangle> buttons = new ArrayList<>();
 
     public ServerSelectorScene() {
         super();
@@ -22,25 +22,40 @@ public class ServerSelectorScene extends Scene {
 
     @Override
     public void init() {
-        button = createButton(1280/2, 720/2, 300, 100);
-        button.draw();
+        int width = 300;
+        int height = 100;
+        for (int i = 0; i < 5; i++) {
+            buttons.add(createButton(
+                    1280 / 2 - (float) width / 2,
+                    (float) height / 2 + height * i * 1.1f,
+                    300,
+                    100
+            ));
+        }
     }
 
-    private Rectangle createButton( float x, float y, int width, int height) {
+    private Rectangle createButton(float x, float y, int width, int height) {
         return new Rectangle(Vector2.of(x, y), width, height, Vector3.of(0.0f, 0.0f, 0.0f));
     }
 
     @Override
     public void update(float dt) {
-        button.draw();
+        buttons.forEach(Rectangle::draw);
 
-        //System.out.println((1.0f / dt) + " FPS");
-
-        if(MouseListener.mouseButtonDown(0)) {
-            if(button.contains(MouseListener.getX(), MouseListener.getY())) {
-                System.out.println("Button pressed");
-                changingScene = true;
+        buttons.forEach(button -> {
+            if (button.contains(MouseListener.getX(), MouseListener.getY())) {
+                button.setColor(Vector3.of(0.15f, 0.15f, 0.15f));
+            } else {
+                button.setColor(Vector3.of(0.0f, 0.0f, 0.0f));
             }
+        });
+
+        if (MouseListener.mouseButtonDown(0)) {
+            buttons.forEach(button -> {
+                if (button.contains(MouseListener.getX(), MouseListener.getY())) {
+                    changingScene = true;
+                }
+            });
         }
 
         if (changingScene && timeToChangeScene > 0) {

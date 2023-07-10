@@ -74,7 +74,7 @@ public class Window {
         // Configure GLFW
         glfwDefaultWindowHints();
         glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
-        glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
+        glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
         // Create the window
         glfwWindow = glfwCreateWindow(width, height, title, NULL, NULL);

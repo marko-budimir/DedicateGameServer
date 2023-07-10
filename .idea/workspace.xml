@@ -7,17 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add 2 scene for GUI and functionality for 2nd screen">
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add listener for mouse click on button and refactoring">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Avatar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/KeyListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/MouseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ServerSelectorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/model/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +225,7 @@
       <workItem from="1688921560253" duration="33000" />
       <workItem from="1688922319248" duration="11376000" />
       <workItem from="1688941712698" duration="1245000" />
-      <workItem from="1688979489964" duration="1142000" />
+      <workItem from="1688979489964" duration="1901000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -344,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688041404322</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add listener for mouse click on button and refactoring">
+      <option name="closed" value="true" />
+      <created>1688980752285</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688980752285</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -385,7 +385,8 @@
     <MESSAGE value="Bringing back deleted classes" />
     <MESSAGE value="Edit server and client to use tcp for communication" />
     <MESSAGE value="Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactoring" />
+    <MESSAGE value="Add listener for mouse click on button and refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add listener for mouse click on button and refactoring" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
