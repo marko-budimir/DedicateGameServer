@@ -1,6 +1,6 @@
-package org.example.client;
+package org.example.client.ui.model;
 
-import org.example.client.model.Rectangle;
+import org.example.client.ui.listener.KeyListener;
 import org.example.client.structure.Vector2;
 import org.example.client.structure.Vector3;
 

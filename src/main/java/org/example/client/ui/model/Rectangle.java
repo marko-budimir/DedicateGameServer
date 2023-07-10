@@ -1,4 +1,4 @@
-package org.example.client.model;
+package org.example.client.ui.model;
 
 import org.example.client.structure.Vector2;
 import org.example.client.structure.Vector3;

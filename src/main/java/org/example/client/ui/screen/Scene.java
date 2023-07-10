@@ -1,4 +1,4 @@
-package org.example.client;
+package org.example.client.ui.screen;
 
 public abstract class Scene {
 

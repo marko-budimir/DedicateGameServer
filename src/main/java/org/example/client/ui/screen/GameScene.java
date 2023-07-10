@@ -1,4 +1,6 @@
-package org.example.client;
+package org.example.client.ui.screen;
+
+import org.example.client.ui.model.Avatar;
 
 public class GameScene extends Scene {
     Avatar avatar;

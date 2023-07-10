@@ -1,5 +1,7 @@
-package org.example.client;
+package org.example.client.ui.screen;
 
+import org.example.client.ui.listener.KeyListener;
+import org.example.client.ui.listener.MouseListener;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
