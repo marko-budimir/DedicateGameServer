@@ -1,8 +1,8 @@
 package org.example.client.ui.model;
 
-import org.example.client.ui.listener.KeyListener;
 import org.example.client.structure.Vector2;
 import org.example.client.structure.Vector3;
+import org.example.client.ui.listener.KeyListener;
 
 import java.awt.event.KeyEvent;
 

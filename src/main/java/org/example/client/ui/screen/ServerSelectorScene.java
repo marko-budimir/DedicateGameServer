@@ -1,8 +1,8 @@
 package org.example.client.ui.screen;
 
 
-import org.example.client.structure.Vector2;
 import org.example.client.structure.Vector3;
+import org.example.client.ui.ServerCollector;
 import org.example.client.ui.listener.MouseListener;
 import org.example.client.ui.model.Rectangle;
 
@@ -14,28 +14,20 @@ public class ServerSelectorScene extends Scene {
     private boolean changingScene = false;
     private float timeToChangeScene = 2.0f;
     private List<Rectangle> buttons = new ArrayList<>();
+    private ServerCollector serverCollector;
 
     public ServerSelectorScene() {
         super();
-        System.out.println("LevelEditorScene");
+        System.out.println("ServerSelectorScene");
     }
 
     @Override
     public void init() {
-        int width = 300;
-        int height = 100;
-        for (int i = 0; i < 5; i++) {
-            buttons.add(createButton(
-                    1280 / 2 - (float) width / 2,
-                    (float) height / 2 + height * i * 1.1f,
-                    300,
-                    100
-            ));
-        }
-    }
-
-    private Rectangle createButton(float x, float y, int width, int height) {
-        return new Rectangle(Vector2.of(x, y), width, height, Vector3.of(0.0f, 0.0f, 0.0f));
+        serverCollector = new ServerCollector(buttons);
+        serverCollector.start();
+        Window.instance.r = 1;
+        Window.instance.g = 1;
+        Window.instance.b = 1;
     }
 
     @Override
@@ -54,6 +46,7 @@ public class ServerSelectorScene extends Scene {
             buttons.forEach(button -> {
                 if (button.contains(MouseListener.getX(), MouseListener.getY())) {
                     changingScene = true;
+                    serverCollector.stopCollecting();
                 }
             });
         }

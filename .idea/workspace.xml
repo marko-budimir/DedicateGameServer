@@ -7,9 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add listener for mouse click on button and refactoring">
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add ServerCollector, ServerLocation and display buttons for servers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/ServerCollector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Button.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +136,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatServer" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="ChatServer" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.ChatServer" />
       <module name="DedicateGameServer.main" />
       <option name="PROGRAM_PARAMETERS" value="4444" />
@@ -225,7 +232,9 @@
       <workItem from="1688921560253" duration="33000" />
       <workItem from="1688922319248" duration="11376000" />
       <workItem from="1688941712698" duration="1245000" />
-      <workItem from="1688979489964" duration="1901000" />
+      <workItem from="1688979489964" duration="8923000" />
+      <workItem from="1689026806190" duration="5402000" />
+      <workItem from="1689065152484" duration="5433000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -344,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688980752285</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add multiple buttons for selecting in ServerSelectorScene">
+      <option name="closed" value="true" />
+      <created>1688981907185</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688981907185</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +403,9 @@
     <MESSAGE value="Edit server and client to use tcp for communication" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Add listener for mouse click on button and refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add listener for mouse click on button and refactoring" />
+    <MESSAGE value="Add multiple buttons for selecting in ServerSelectorScene" />
+    <MESSAGE value="Add ServerCollector, ServerLocation and display buttons for servers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ServerCollector, ServerLocation and display buttons for servers" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

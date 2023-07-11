@@ -12,7 +12,8 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
-    private int width, height;
+    private int width;
+    private int height;
     private String title;
     private long glfwWindow;
     public float r, g, b, a;
@@ -106,7 +107,7 @@ public class Window {
     }
 
     public void loop() {
-        float beginTime = (float)glfwGetTime();
+        float beginTime = (float) glfwGetTime();
         float endTime;
         float dt = -1.0f;
         GL.createCapabilities();
@@ -124,7 +125,7 @@ public class Window {
 
             glfwSwapBuffers(glfwWindow);
 
-            endTime = (float)glfwGetTime();
+            endTime = (float) glfwGetTime();
             dt = endTime - beginTime;
             beginTime = endTime;
         }
