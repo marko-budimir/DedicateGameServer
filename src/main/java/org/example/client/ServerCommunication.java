@@ -1,5 +1,6 @@
 package org.example.client;
 
+import org.example.client.ui.listener.WindowListener;
 import org.example.client.ui.model.Enemy;
 import org.example.client.ui.model.Rectangle;
 
@@ -33,7 +34,7 @@ public class ServerCommunication {
     public void startListening(Map<String, Rectangle> enemies) throws IOException {
         Thread thread = new Thread(() -> {
             try {
-                while (running) {
+                while (running && WindowListener.isRunning()) {
                     String serverMessage = serverReader.readLine();
                     if (serverMessage != null) {
                         System.out.println(serverMessage);

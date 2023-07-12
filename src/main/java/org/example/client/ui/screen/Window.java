@@ -3,6 +3,7 @@ package org.example.client.ui.screen;
 import org.example.client.ServerLocation;
 import org.example.client.ui.listener.KeyListener;
 import org.example.client.ui.listener.MouseListener;
+import org.example.client.ui.listener.WindowListener;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
@@ -85,6 +86,7 @@ public class Window {
         glfwSetCursorPosCallback(glfwWindow, MouseListener::mousePosCallback);
         glfwSetMouseButtonCallback(glfwWindow, MouseListener::mouseButtonCallback);
         glfwSetKeyCallback(glfwWindow, KeyListener::keyCallback);
+        glfwSetWindowCloseCallback(glfwWindow, WindowListener::windowCloseCallback);
 
         // Make the OpenGL context current
         glfwMakeContextCurrent(glfwWindow);

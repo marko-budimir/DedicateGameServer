@@ -1,5 +1,6 @@
 package org.example.client;
 
+import org.example.client.ui.listener.WindowListener;
 import org.example.client.ui.model.Button;
 
 import java.io.IOException;
@@ -30,7 +31,7 @@ public class ServerCollector extends Thread {
         int width = 300;
         int height = 100;
         int size = 0;
-        while (isRunning) {
+        while (isRunning && WindowListener.isRunning()) {
             try (DatagramSocket datagramSocket = new DatagramSocket(null)) {
                 datagramSocket.setReuseAddress(true);
                 datagramSocket.bind(new InetSocketAddress(PORT_NUMBER));
