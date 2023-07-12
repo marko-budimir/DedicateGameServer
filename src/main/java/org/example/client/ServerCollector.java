@@ -1,9 +1,6 @@
-package org.example.client.ui;
+package org.example.client;
 
-import org.example.client.ServerLocation;
-import org.example.client.structure.Vector2;
-import org.example.client.structure.Vector3;
-import org.example.client.ui.model.Rectangle;
+import org.example.client.ui.model.Button;
 
 import java.io.IOException;
 import java.net.*;
@@ -15,9 +12,9 @@ public class ServerCollector extends Thread {
     private static final int PORT_NUMBER = 4445;
     private Set<ServerLocation> serverLocations;
     private boolean isRunning = true;
-    private List<Rectangle> buttons;
+    private List<Button> buttons;
 
-    public ServerCollector(List<Rectangle> buttons) {
+    public ServerCollector(List<Button> buttons) {
         serverLocations = new HashSet<>();
         this.buttons = buttons;
     }
@@ -52,19 +49,14 @@ public class ServerCollector extends Thread {
             String receivedData = new String(initialPacket.getData(), 0, initialPacket.getLength());
             int portNumber = Integer.parseInt(receivedData.trim());
 
-            serverLocations.add(new ServerLocation(address, portNumber));
+            ServerLocation serverLocation = new ServerLocation(address, portNumber);
+            serverLocations.add(serverLocation);
             System.out.println("Received packet from " + address + ":" + portNumber);
             if (serverLocations.size() > size) {
                 size = serverLocations.size();
-                buttons.add(new Rectangle(
-                        Vector2.of(
-                                (float) 1280 / 2 - (float) width / 2,
-                                (float) height / 2 + height * (size - 1) * 1.1f
-                        ),
-                        width,
-                        height,
-                        Vector3.of(0.0f, 0.0f, 0.0f)
-                ));
+                Button button = new Button(width, height, size);
+                button.setServerLocation(serverLocation);
+                buttons.add(button);
             }
         }
     }

@@ -1,5 +1,6 @@
 package org.example.client.ui.screen;
 
+import org.example.client.ServerLocation;
 import org.example.client.ui.listener.KeyListener;
 import org.example.client.ui.listener.MouseListener;
 import org.lwjgl.Version;
@@ -12,19 +13,17 @@ import static org.lwjgl.opengl.GL11.*;
 import static org.lwjgl.system.MemoryUtil.NULL;
 
 public class Window {
-    private int width;
-    private int height;
-    private String title;
+    private static final int width = 1280;
+    private static final int height = 720;
+    private final String title = "Game";
     private long glfwWindow;
     public float r, g, b, a;
 
     public static final Window instance = new Window();
     public static Scene currentScene = null;
+    private static ServerLocation serverLocation;
 
     private Window() {
-        width = 1280;
-        height = 720;
-        title = "Game";
         r = 1;
         g = 1;
         b = 1;
@@ -35,11 +34,11 @@ public class Window {
         switch (newScene) {
             case 0:
                 currentScene = new ServerSelectorScene();
-                currentScene.init();
+                currentScene.init(width, height);
                 break;
             case 1:
                 currentScene = new GameScene();
-                currentScene.init();
+                currentScene.init(width, height);
                 break;
             default:
                 assert false : "Unknown scene '" + newScene + "'";
@@ -85,7 +84,6 @@ public class Window {
 
         glfwSetCursorPosCallback(glfwWindow, MouseListener::mousePosCallback);
         glfwSetMouseButtonCallback(glfwWindow, MouseListener::mouseButtonCallback);
-        glfwSetScrollCallback(glfwWindow, MouseListener::mouseScrollCallback);
         glfwSetKeyCallback(glfwWindow, KeyListener::keyCallback);
 
         // Make the OpenGL context current
@@ -129,5 +127,13 @@ public class Window {
             dt = endTime - beginTime;
             beginTime = endTime;
         }
+    }
+
+    public void setServerLocation(ServerLocation serverLocation) {
+        this.serverLocation = serverLocation;
+    }
+
+    public static ServerLocation getServerLocation() {
+        return serverLocation;
     }
 }

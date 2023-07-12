@@ -1,14 +1,7 @@
 package org.example.client.ui.screen;
 
-public abstract class Scene {
-
-    public Scene() {
-
-    }
-
-    public void init() {
-
-    }
+public interface Scene {
+    public void init(int width, int height);
 
     public abstract void update(float dt);
 }

@@ -1,28 +1,28 @@
 package org.example.client.ui.screen;
 
 
+import org.example.client.ServerCollector;
+import org.example.client.ServerLocation;
 import org.example.client.structure.Vector3;
-import org.example.client.ui.ServerCollector;
 import org.example.client.ui.listener.MouseListener;
-import org.example.client.ui.model.Rectangle;
+import org.example.client.ui.model.Button;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServerSelectorScene extends Scene {
+public class ServerSelectorScene implements Scene {
 
     private boolean changingScene = false;
     private float timeToChangeScene = 2.0f;
-    private List<Rectangle> buttons = new ArrayList<>();
+    private List<Button> buttons = new ArrayList<>();
     private ServerCollector serverCollector;
 
     public ServerSelectorScene() {
-        super();
         System.out.println("ServerSelectorScene");
     }
 
     @Override
-    public void init() {
+    public void init(int width, int height) {
         serverCollector = new ServerCollector(buttons);
         serverCollector.start();
         Window.instance.r = 1;
@@ -32,7 +32,7 @@ public class ServerSelectorScene extends Scene {
 
     @Override
     public void update(float dt) {
-        buttons.forEach(Rectangle::draw);
+        buttons.forEach(Button::draw);
 
         buttons.forEach(button -> {
             if (button.contains(MouseListener.getX(), MouseListener.getY())) {
@@ -47,6 +47,9 @@ public class ServerSelectorScene extends Scene {
                 if (button.contains(MouseListener.getX(), MouseListener.getY())) {
                     changingScene = true;
                     serverCollector.stopCollecting();
+
+                    ServerLocation serverLocation = button.getServerLocation();
+                    Window.instance.setServerLocation(serverLocation);
                 }
             });
         }

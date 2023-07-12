@@ -7,14 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add ServerCollector, ServerLocation and display buttons for servers">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerLocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/ServerCollector.java" afterDir="false" />
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add client connection to server">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCommunication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Button.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/ServerCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/KeyListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/MouseListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Scene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" afterDir="false" />
     </list>
@@ -95,7 +97,7 @@
       <recent name="org.example.server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.ChatServer">
     <configuration name="BroServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.BroServer" />
       <module name="DedicateGameServer.main" />
@@ -234,7 +236,8 @@
       <workItem from="1688941712698" duration="1245000" />
       <workItem from="1688979489964" duration="8923000" />
       <workItem from="1689026806190" duration="5402000" />
-      <workItem from="1689065152484" duration="5433000" />
+      <workItem from="1689065152484" duration="9193000" />
+      <workItem from="1689112613186" duration="8414000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -361,7 +364,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688981907185</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add ServerCollector, ServerLocation and display buttons for servers">
+      <option name="closed" value="true" />
+      <created>1689073551278</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689073551278</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +416,8 @@
     <MESSAGE value="Add listener for mouse click on button and refactoring" />
     <MESSAGE value="Add multiple buttons for selecting in ServerSelectorScene" />
     <MESSAGE value="Add ServerCollector, ServerLocation and display buttons for servers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ServerCollector, ServerLocation and display buttons for servers" />
+    <MESSAGE value="Add client connection to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add client connection to server" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
