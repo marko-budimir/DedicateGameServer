@@ -7,12 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Edit server and client to use tcp for communication">
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add client connection to server">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCommunication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Button.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/BroadcastServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/BroadcastServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/ServerCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/KeyListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/KeyListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/MouseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/MouseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Scene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="task_ix" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +81,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;task__ix&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;task__x&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/buda/IdeaProjects/DedicateGameServer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -91,7 +97,7 @@
       <recent name="org.example.server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloWorld">
+  <component name="RunManager" selected="Application.ChatServer">
     <configuration name="BroServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.BroServer" />
       <module name="DedicateGameServer.main" />
@@ -110,7 +116,7 @@
       <module name="DedicateGameServer.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.client.*" />
+          <option name="PATTERN" value="org.example.client.screen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,7 +130,7 @@
       <option name="PROGRAM_PARAMETERS" value="192.168.124.152 4444" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.client.*" />
+          <option name="PATTERN" value="org.example.client.screen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,7 +138,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatServer" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="ChatServer" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.ChatServer" />
       <module name="DedicateGameServer.main" />
       <option name="PROGRAM_PARAMETERS" value="4444" />
@@ -159,13 +165,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="DedicateGameServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquareCharacter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.client.SquareCharacter" />
+      <module name="DedicateGameServer.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.client.screen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SquareCharacter" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.HelloWorld" />
         <item itemvalue="Application.BroServer" />
         <item itemvalue="Application.BroadcastingClient" />
-        <item itemvalue="Application.HelloWorld" />
-        <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +224,20 @@
       <workItem from="1687984047828" duration="5148000" />
       <workItem from="1688022935637" duration="5048000" />
       <workItem from="1688029864492" duration="1773000" />
-      <workItem from="1688039555940" duration="1705000" />
+      <workItem from="1688039555940" duration="3556000" />
+      <workItem from="1688224498612" duration="1982000" />
+      <workItem from="1688374577113" duration="3142000" />
+      <workItem from="1688467372823" duration="3429000" />
+      <workItem from="1688556107907" duration="678000" />
+      <workItem from="1688556793196" duration="2302000" />
+      <workItem from="1688632620775" duration="7133000" />
+      <workItem from="1688921560253" duration="33000" />
+      <workItem from="1688922319248" duration="11376000" />
+      <workItem from="1688941712698" duration="1245000" />
+      <workItem from="1688979489964" duration="8923000" />
+      <workItem from="1689026806190" duration="5402000" />
+      <workItem from="1689065152484" duration="9193000" />
+      <workItem from="1689112613186" duration="8414000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -295,7 +340,39 @@
       <option name="project" value="LOCAL" />
       <updated>1688028938383</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Refactoring">
+      <option name="closed" value="true" />
+      <created>1688041404322</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688041404322</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Add listener for mouse click on button and refactoring">
+      <option name="closed" value="true" />
+      <created>1688980752285</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688980752285</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add multiple buttons for selecting in ServerSelectorScene">
+      <option name="closed" value="true" />
+      <created>1688981907185</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688981907185</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add ServerCollector, ServerLocation and display buttons for servers">
+      <option name="closed" value="true" />
+      <created>1689073551278</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1689073551278</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,10 +410,14 @@
     <MESSAGE value="Add BroadcastServer and edit ChatServer to use UDP broadcast" />
     <MESSAGE value="Edit ChatClient to use UDP and fix ChatServer and BroadcastServer" />
     <MESSAGE value="Add LWJGL library dependencies and HelloWorld example" />
-    <MESSAGE value="Refactoring" />
     <MESSAGE value="Bringing back deleted classes" />
     <MESSAGE value="Edit server and client to use tcp for communication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit server and client to use tcp for communication" />
+    <MESSAGE value="Refactoring" />
+    <MESSAGE value="Add listener for mouse click on button and refactoring" />
+    <MESSAGE value="Add multiple buttons for selecting in ServerSelectorScene" />
+    <MESSAGE value="Add ServerCollector, ServerLocation and display buttons for servers" />
+    <MESSAGE value="Add client connection to server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add client connection to server" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
