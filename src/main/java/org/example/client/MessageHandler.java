@@ -1,4 +1,4 @@
-package org.example.client.ui;
+package org.example.client;
 
 import org.example.client.ui.model.Enemy;
 

@@ -1,4 +1,4 @@
-package org.example.client;
+package org.example.client.communication;
 
 import org.example.client.ui.listener.WindowListener;
 import org.example.client.ui.model.Button;
@@ -11,9 +11,9 @@ import java.util.Set;
 
 public class ServerCollector extends Thread {
     private static final int PORT_NUMBER = 4445;
-    private Set<ServerLocation> serverLocations;
+    private final Set<ServerLocation> serverLocations;
     private boolean isRunning = true;
-    private List<Button> buttons;
+    private final List<Button> buttons;
 
     public ServerCollector(List<Button> buttons) {
         serverLocations = new HashSet<>();

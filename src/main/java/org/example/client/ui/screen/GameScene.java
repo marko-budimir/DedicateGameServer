@@ -1,7 +1,7 @@
 package org.example.client.ui.screen;
 
-import org.example.client.ServerCommunication;
-import org.example.client.ServerLocation;
+import org.example.client.communication.ServerCommunication;
+import org.example.client.communication.ServerLocation;
 import org.example.client.structure.Vector2;
 import org.example.client.ui.listener.KeyListener;
 import org.example.client.ui.model.Avatar;
@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.example.client.ui.MessageHandler.encodeMessage;
+import static org.example.client.MessageHandler.encodeMessage;
 import static org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE;
 
 public class GameScene implements Scene {

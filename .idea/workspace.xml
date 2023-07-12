@@ -7,12 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add message encoder and decoder for client and enemies locations">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/listener/WindowListener.java" afterDir="false" />
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add WindowListener to check if window is running">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ChatClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCollector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/GameClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCollector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/communication/ServerCollector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ServerCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/communication/ServerCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ServerLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/communication/ServerLocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Button.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Button.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/ServerSelectorScene.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/screen/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +96,7 @@
       <recent name="org.example.server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.GameClient">
     <configuration name="BroServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.BroServer" />
       <module name="DedicateGameServer.main" />
@@ -111,7 +115,7 @@
       <module name="DedicateGameServer.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.client.*" />
+          <option name="PATTERN" value="org.example.client.communication.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.HelloWorld" />
+    <configuration name="GameClient" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.client.GameClient" />
       <module name="DedicateGameServer.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,12 +164,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.HelloWorld" />
       <module name="DedicateGameServer.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.client.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,7 +196,7 @@
         <item itemvalue="Application.BroServer" />
         <item itemvalue="Application.BroadcastingClient" />
         <item itemvalue="Application.SquareCharacter" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GameClient" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +238,8 @@
       <workItem from="1689065152484" duration="9193000" />
       <workItem from="1689112613186" duration="8786000" />
       <workItem from="1689147530797" duration="11652000" />
-      <workItem from="1689167216234" duration="653000" />
+      <workItem from="1689167216234" duration="862000" />
+      <workItem from="1689168086151" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -385,7 +390,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689167526124</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add WindowListener to check if window is running">
+      <option name="closed" value="true" />
+      <created>1689167967181</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1689167967181</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +444,8 @@
     <MESSAGE value="Add ServerCollector, ServerLocation and display buttons for servers" />
     <MESSAGE value="Add client connection to server" />
     <MESSAGE value="Add message encoder and decoder for client and enemies locations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add message encoder and decoder for client and enemies locations" />
+    <MESSAGE value="Add WindowListener to check if window is running" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add WindowListener to check if window is running" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

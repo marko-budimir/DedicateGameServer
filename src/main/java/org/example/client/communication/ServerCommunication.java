@@ -1,4 +1,4 @@
-package org.example.client;
+package org.example.client.communication;
 
 import org.example.client.ui.listener.WindowListener;
 import org.example.client.ui.model.Enemy;
@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Map;
 
-import static org.example.client.ui.MessageHandler.decodeMessage;
+import static org.example.client.MessageHandler.decodeMessage;
 
 public class ServerCommunication {
     private final Socket socket;
