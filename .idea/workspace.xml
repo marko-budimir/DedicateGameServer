@@ -8,7 +8,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Edit OutputStreamManager to remember last sent messages">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04e316618072fa602519bacb5ce3036d3d7f3e8b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/168c3bd46c3baca99c6df93a55751bc8081304f5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24b3b4a8113bebd7d9abcc9a5ce736d79963f2f6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b3061978b8a012a427117a3a107833115ea7c27" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c467b8793ca50d8b4f19abcc08a943948dc43b8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/3/637c543223c35d88048df36581fc6d98d28b17db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69f2543b9b32c545032511cf03d858ab3b040f69" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f1a88eedd33b8cf0d671eb69d04fb903b44a146" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/b/7b1421755bf5d7b3605940cadfb7744c0ccf201e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa6dded41d9847631344a8b5f7a62776bc506379" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca6751bbbf51817b0ce07a87d305845e9a8ef494" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d889e8e883ca4096a2d82c8bba046b0ff4aca974" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f698329c9caf8f6bb6a8e815c754254c5ca2f210" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/4/04e316618072fa602519bacb5ce3036d3d7f3e8b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/6/168c3bd46c3baca99c6df93a55751bc8081304f5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/4/24b3b4a8113bebd7d9abcc9a5ce736d79963f2f6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/b/2b3061978b8a012a427117a3a107833115ea7c27" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4c467b8793ca50d8b4f19abcc08a943948dc43b8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/3/637c543223c35d88048df36581fc6d98d28b17db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/9/69f2543b9b32c545032511cf03d858ab3b040f69" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/f/6f1a88eedd33b8cf0d671eb69d04fb903b44a146" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/b/7b1421755bf5d7b3605940cadfb7744c0ccf201e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aa6dded41d9847631344a8b5f7a62776bc506379" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/a/ca6751bbbf51817b0ce07a87d305845e9a8ef494" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/8/d889e8e883ca4096a2d82c8bba046b0ff4aca974" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/6/f698329c9caf8f6bb6a8e815c754254c5ca2f210" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/BroadcastServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/BroadcastServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/ChatServerThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +85,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="task_xii" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,56 +99,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "task__xii",
-    "last_opened_file_path": "/home/buda/IdeaProjects/enea-dedicated_game_server",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/buda/IdeaProjects/enea-dedicated_game_server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.server" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GameClient">
-    <configuration name="BroServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.server.BroServer" />
-      <module name="DedicateGameServer.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BroadcastingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.client.BroadcastingClient" />
-      <module name="DedicateGameServer.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.client.communication.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ChatClient" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.client.ChatClient" />
       <module name="DedicateGameServer.main" />
@@ -132,7 +140,7 @@
     <configuration name="ChatServer" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.server.ChatServer" />
       <module name="DedicateGameServer.main" />
-      <option name="PROGRAM_PARAMETERS" value="4444" />
+      <option name="PROGRAM_PARAMETERS" value="4446" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.server.*" />
@@ -156,38 +164,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.HelloWorld" />
-      <module name="DedicateGameServer.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SquareCharacter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.client.SquareCharacter" />
-      <module name="DedicateGameServer.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.client.screen.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloWorld" />
-        <item itemvalue="Application.BroServer" />
-        <item itemvalue="Application.BroadcastingClient" />
-        <item itemvalue="Application.SquareCharacter" />
         <item itemvalue="Application.GameClient" />
       </list>
     </recent_temporary>
@@ -232,7 +210,10 @@
       <workItem from="1689147530797" duration="11652000" />
       <workItem from="1689167216234" duration="862000" />
       <workItem from="1689168086151" duration="1130000" />
-      <workItem from="1689197658655" duration="7133000" />
+      <workItem from="1689197658655" duration="7581000" />
+      <workItem from="1689208724472" duration="232000" />
+      <workItem from="1689238974773" duration="1472000" />
+      <workItem from="1689243169082" duration="2895000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1686778605699</created>
@@ -399,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689168569050</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Edit OutputStreamManager to remember last sent messages">
+      <option name="closed" value="true" />
+      <created>1689208277393</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689208277393</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

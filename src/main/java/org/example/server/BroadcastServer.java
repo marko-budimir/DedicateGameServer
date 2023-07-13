@@ -6,6 +6,19 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 
+/**
+ * Broadcast server.
+ * <p>
+ *     The broadcast server is used to broadcast the port number of the chat server to the network.
+ *     The port number is broadcast every 5 seconds.
+ * </p>
+ *
+ * @see Thread
+ * @see ChatServer
+ * @see ChatServerThread
+ * @see OutputStreamManager
+ */
+
 public class BroadcastServer extends Thread {
     private static final long SLEEP_TIME = 5000;
     private static final int PORT_NUMBER = 4445;

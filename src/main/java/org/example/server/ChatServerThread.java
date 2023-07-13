@@ -6,6 +6,18 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 
+/**
+ * Chat server thread.
+ * <p>
+ *     The chat server thread listens for incoming connections using the specified port number and
+ *     broadcasts messages to all connected clients.
+ * </p>
+ *
+ * @see Thread
+ * @see BroadcastServer
+ * @see ChatServer
+ * @see OutputStreamManager
+ */
 public class ChatServerThread extends Thread {
     private final Socket socket;
 
