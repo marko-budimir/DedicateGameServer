@@ -16,6 +16,9 @@ public class MessageHandler {
     }
 
     public static Enemy decodeMessage(String message) {
+        if (message == null) {
+            return null;
+        }
         String[] parts = message.split(":");
         String clientId = parts[0];
         if (clientId == null || parts.length != 2) {

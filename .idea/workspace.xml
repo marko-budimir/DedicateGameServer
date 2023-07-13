@@ -7,13 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Edit OutputStreamManager to remember last sent messages">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/client/MessageHandlerTest.java" afterDir="false" />
+    <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Add tests for MessageHandler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/structure/Vector2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/structure/Vector2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/structure/Vector3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/structure/Vector3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/ui/model/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/client/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/client/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/client/MessageHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/client/MessageHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -445,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689168569050</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Add tests for MessageHandler">
+      <option name="closed" value="true" />
+      <created>1689250241832</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1689250241832</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +526,8 @@
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Edit OutputStreamManager to remember last sent messages" />
     <MESSAGE value="Add java doc for server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add java doc for server" />
+    <MESSAGE value="Add tests for MessageHandler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests for MessageHandler" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
