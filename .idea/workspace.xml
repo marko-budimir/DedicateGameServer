@@ -9,7 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="52a02329-58e9-4bf5-8742-d8a6c833c853" name="Changes" comment="Edit OutputStreamManager to remember last sent messages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/server/OutputStreamManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "task__xii",
+    "git-widget-placeholder": "task__xiii",
     "last_opened_file_path": "/home/buda/IdeaProjects/enea-dedicated_game_server",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -421,7 +421,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -447,7 +459,8 @@
     <MESSAGE value="Add WindowListener to check if window is running" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Edit OutputStreamManager to remember last sent messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit OutputStreamManager to remember last sent messages" />
+    <MESSAGE value="Add java doc for server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add java doc for server" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
