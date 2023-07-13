@@ -36,4 +36,13 @@ public class Vector3<T extends Number> {
         return decimalFormat.format(x) + "," + decimalFormat.format(y) + "," + decimalFormat.format(z);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Vector3) {
+            Vector3<?> other = (Vector3<?>) obj;
+            return x.equals(other.x) && y.equals(other.y) && z.equals(other.z);
+        }
+        return false;
+    }
+
 }

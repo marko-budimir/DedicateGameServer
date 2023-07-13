@@ -59,4 +59,13 @@ public class Rectangle {
         GL11.glVertex2f(x, y + height);
         GL11.glEnd();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Rectangle) {
+            Rectangle other = (Rectangle) obj;
+            return vertex.equals(other.vertex) && width == other.width && height == other.height && color.equals(other.color);
+        }
+        return false;
+    }
 }
