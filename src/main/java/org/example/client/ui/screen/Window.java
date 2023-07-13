@@ -1,8 +1,9 @@
 package org.example.client.ui.screen;
 
-import org.example.client.ServerLocation;
+import org.example.client.communication.ServerLocation;
 import org.example.client.ui.listener.KeyListener;
 import org.example.client.ui.listener.MouseListener;
+import org.example.client.ui.listener.WindowListener;
 import org.lwjgl.Version;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.opengl.GL;
@@ -15,7 +16,7 @@ import static org.lwjgl.system.MemoryUtil.NULL;
 public class Window {
     private static final int width = 1280;
     private static final int height = 720;
-    private final String title = "Game";
+    private static final String title = "Game";
     private long glfwWindow;
     public float r, g, b, a;
 
@@ -85,6 +86,7 @@ public class Window {
         glfwSetCursorPosCallback(glfwWindow, MouseListener::mousePosCallback);
         glfwSetMouseButtonCallback(glfwWindow, MouseListener::mouseButtonCallback);
         glfwSetKeyCallback(glfwWindow, KeyListener::keyCallback);
+        glfwSetWindowCloseCallback(glfwWindow, WindowListener::windowCloseCallback);
 
         // Make the OpenGL context current
         glfwMakeContextCurrent(glfwWindow);
@@ -129,8 +131,8 @@ public class Window {
         }
     }
 
-    public void setServerLocation(ServerLocation serverLocation) {
-        this.serverLocation = serverLocation;
+    public static void setServerLocation(ServerLocation serverLocation) {
+        Window.serverLocation = serverLocation;
     }
 
     public static ServerLocation getServerLocation() {

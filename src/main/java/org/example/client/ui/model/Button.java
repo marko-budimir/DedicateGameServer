@@ -1,6 +1,6 @@
 package org.example.client.ui.model;
 
-import org.example.client.ServerLocation;
+import org.example.client.communication.ServerLocation;
 import org.example.client.structure.Vector2;
 import org.example.client.structure.Vector3;
 

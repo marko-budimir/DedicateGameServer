@@ -1,8 +1,8 @@
 package org.example.client.ui.screen;
 
 
-import org.example.client.ServerCollector;
-import org.example.client.ServerLocation;
+import org.example.client.communication.ServerCollector;
+import org.example.client.communication.ServerLocation;
 import org.example.client.structure.Vector3;
 import org.example.client.ui.listener.MouseListener;
 import org.example.client.ui.model.Button;
@@ -49,7 +49,7 @@ public class ServerSelectorScene implements Scene {
                     serverCollector.stopCollecting();
 
                     ServerLocation serverLocation = button.getServerLocation();
-                    Window.instance.setServerLocation(serverLocation);
+                    Window.setServerLocation(serverLocation);
                 }
             });
         }

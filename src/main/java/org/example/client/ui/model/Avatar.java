@@ -9,9 +9,10 @@ import java.awt.event.KeyEvent;
 public class Avatar {
     private float x;
     private float y;
-    private float size;
-    private float speed;
-    private Rectangle square;
+    private final float size;
+    private final float speed;
+    private final Rectangle square;
+    private boolean isMoving;
 
     public Avatar(int windowWidth, int windowHeight) {
         x = (float) windowWidth / 2;
@@ -25,20 +26,37 @@ public class Avatar {
     public void update() {
         if (KeyListener.isKeyPressed(KeyEvent.VK_W)) {
             y -= speed;
+            isMoving = true;
         }
         if (KeyListener.isKeyPressed(KeyEvent.VK_S)) {
             y += speed;
+            isMoving = true;
         }
         if (KeyListener.isKeyPressed(KeyEvent.VK_A)) {
             x -= speed;
+            isMoving = true;
         }
         if (KeyListener.isKeyPressed(KeyEvent.VK_D)) {
             x += speed;
+            isMoving = true;
         }
+    }
+
+    public boolean isMoving() {
+        return isMoving;
     }
 
     public void draw() {
         square.setVertex(Vector2.of(x, y));
         square.draw();
+        isMoving = false;
+    }
+
+    public Vector2<Float> getVertex() {
+        return Vector2.of(x, y);
+    }
+
+    public float getSize() {
+        return size;
     }
 }
